@@ -11,6 +11,7 @@ interface sidebar_icons_fn {
 
 interface sidebar_props {
   role?: string;
+  isSidebarOpen?: boolean
 }
 
 export type { sidebar_items, sidebar_icons_fn, sidebar_props };

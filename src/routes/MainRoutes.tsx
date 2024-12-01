@@ -1,8 +1,9 @@
-import RequiredAuth from "@/components/required_auth";
+// import RequiredAuth from "@/components/required_auth";
+import { Outlet } from "react-router-dom";
 
 const MainRoutes = {
   path: "/",
-  element: <RequiredAuth allowedRole="" />,
+  element: <Outlet />,
   children: [
     {
       path: "/",

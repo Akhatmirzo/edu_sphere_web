@@ -13,41 +13,14 @@ export const sidebarAdmin: sidebar_items[] = [
       {
         title: "Analytics",
         path: "analytics",
-      }
-    ],
-  },
-  {
-    title: "General",
-    path: "#",
-    icon: null,
-    children: [
-      {
-        title: "Settings",
-        path: "settings",
       },
       {
-        title: "Customers",
-        path: "customers",
+        title: "Employers",
+        path: "employers",
       },
       {
-        title: "Products",
-        path: "products",
-      },
-      {
-        title: "Orders",
-        path: "orders",
-      },
-      {
-        title: "Invoices",
-        path: "invoices",
-      },
-      {
-        title: "Jobs",
-        path: "jobs",
-      },
-      {
-        title: "Logistics",
-        path: "logistics",
+        title: "Edus",
+        path: "edus",
       },
     ],
   },
@@ -66,7 +39,7 @@ export const sidebarEmployer: sidebar_items[] = [
       {
         title: "Analytics",
         path: "analytics",
-      }
+      },
     ],
   },
   {
@@ -79,12 +52,12 @@ export const sidebarEmployer: sidebar_items[] = [
         path: "settings",
       },
       {
-        title: "Customers",
-        path: "customers",
+        title: "Managers",
+        path: "managers",
       },
       {
-        title: "Products",
-        path: "products",
+        title: "Edus",
+        path: "edus",
       },
       {
         title: "Orders",
@@ -95,12 +68,12 @@ export const sidebarEmployer: sidebar_items[] = [
         path: "invoices",
       },
       {
-        title: "Jobs",
-        path: "jobs",
+        title: "Teachers",
+        path: "teachers",
       },
       {
-        title: "Logistics",
-        path: "logistics",
+        title: "Groups",
+        path: "groups",
       },
     ],
   },

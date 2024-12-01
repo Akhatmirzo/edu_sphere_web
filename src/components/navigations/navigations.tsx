@@ -1,5 +1,4 @@
 import {
-  Search,
   Bell,
   User2,
   ChevronDown,
@@ -7,6 +6,8 @@ import {
   Shield,
   CreditCard,
   LogOut,
+  PanelRightOpen,
+  PanelRightClose,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import {
@@ -16,20 +17,41 @@ import {
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
-import { Input } from "@/components/ui/input";
 import { DropdownMenuSeparator } from "@radix-ui/react-dropdown-menu";
 import NotificationsPanel from "../notifications/NotificationsPanel";
+import { useSidebar } from "../ui/sidebar";
+import { Dispatch, SetStateAction } from "react";
 
-export function SiteHeader() {
+export function SiteHeader({
+  setIsSidebarOpen,
+  isSidebarOpen,
+}: {
+  setIsSidebarOpen: Dispatch<SetStateAction<boolean>>;
+  isSidebarOpen: boolean;
+}) {
+  const { toggleSidebar, open } = useSidebar();
+
+  const toggleSidebarButton = () => {
+    toggleSidebar();
+    setIsSidebarOpen(!open);
+  };
+
   return (
     <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
       <div className="mx-3 flex h-14 items-center">
         <div className="flex flex-1 items-center justify-between space-x-4">
           <div className="w-full flex-1 md:w-auto md:flex-none">
-            <div className="relative">
-              <Search className="absolute left-2 top-2.5 h-4 w-4 text-muted-foreground" />
-              <Input type="search" placeholder="Search..." className="pl-8" />
-            </div>
+            {isSidebarOpen ? (
+              <PanelRightOpen
+                onClick={toggleSidebarButton}
+                size={28}
+              />
+            ) : (
+              <PanelRightClose
+                onClick={toggleSidebarButton}
+                size={28}
+              />
+            )}
           </div>
           <nav className="flex items-center space-x-2">
             <DropdownMenu>
