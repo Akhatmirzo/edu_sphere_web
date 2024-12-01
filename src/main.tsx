@@ -1,13 +1,13 @@
-import { StrictMode } from 'react'
-import { createRoot } from 'react-dom/client'
-import './index.css'
-import App from './App.tsx'
-// import ScrollTop from './components/ScrollTop.tsx'
+import { StrictMode } from "react";
+import { createRoot } from "react-dom/client";
+import "./index.css";
+import App from "./App.tsx";
+import { ThemeProvider } from "./components/theme/theme-provider.tsx";
 
-createRoot(document.getElementById('root')!).render(
+createRoot(document.getElementById("root")!).render(
   <StrictMode>
-    {/* <ScrollTop>
-    </ScrollTop>, */}
+    <ThemeProvider defaultTheme="system" storageKey="vite-ui-theme">
       <App />
+    </ThemeProvider>
   </StrictMode>
-)
+);

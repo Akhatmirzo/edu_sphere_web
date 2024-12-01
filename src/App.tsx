@@ -1,12 +1,14 @@
-import './App.css'
+import { RouterProvider } from "react-router-dom";
+import "./App.css";
+import router from "./routes";
+import ScrollTop from "./components/ScrollTop";
 
 function App() {
-
   return (
-    <>
-     <h1>Hello world</h1>
-    </>
-  )
+    <ScrollTop>
+      <RouterProvider router={router} />
+    </ScrollTop>
+  );
 }
 
-export default App
+export default App;

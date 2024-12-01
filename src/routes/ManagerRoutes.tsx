@@ -1,5 +1,4 @@
 import RequiredAuth from "../components/required_auth/index";
-import Dashboard from "../pages/manager/Dashboard";
 
 const ManagerRoutes = {
   path: "/",
@@ -7,7 +6,7 @@ const ManagerRoutes = {
   children: [
     {
       path: "manager",
-      element: <Dashboard />,
+      element: <h1>Manager</h1>,
     },
   ],
 };

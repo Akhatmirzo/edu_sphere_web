@@ -1,14 +1,17 @@
 import RequiredAuth from "../components/required_auth/index";
-import Dashboard from "../pages/admin/Dashboard";
 
 const AdminRoutes = {
-  path: "/",
+  path: "/admin",
   element: <RequiredAuth allowedRole={"admin"} />,
   children: [
     {
-      path: "admin",
-      element: <Dashboard />,
-    }
+      path: "",
+      element: <h1>Dashboard</h1>,
+    },
+    {
+      path: "analytics",
+      element: <h1>analytics</h1>,
+    },
   ],
 };
 
